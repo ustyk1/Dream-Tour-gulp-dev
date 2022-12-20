@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dream Tour</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicon/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicon/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            @@include("../blocks/modules/header/header.html")
+        <main class="main container">
+            @@include("../blocks/modules/banner/banner.html")
+            @@include("../blocks/modules/create-memory/create-memory.html")
+            @@include("../blocks/modules/new-places/new-places.html")
+            @@include("../blocks/modules/choose/choose.html")
+            @@include("../blocks/modules/offers/offers.html")
+            @@include("../blocks/modules/be-updated/be-updated.html")
+        </main>
+            @@include("../blocks/modules/footer/footer.html")
+        </div>
+
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

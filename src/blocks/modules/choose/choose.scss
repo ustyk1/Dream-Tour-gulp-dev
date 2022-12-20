@@ -1,0 +1,99 @@
+.choose {
+  background-color: $dark-gray-color;
+  padding: 40px 0;
+  position: relative;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__text-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $light-gray-color;
+    text-align: center;
+  }
+  &__text {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & > h2 {
+      font-family: "Cardo-Bold";
+      letter-spacing: -1.39px;
+      font-size: $h2_fz_38-56;
+      margin-bottom: 30px;
+      line-height: 1;
+    }
+    & > h3 {
+      font-family: "Lato-Black";
+      letter-spacing: -0.63px;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    & > p {
+      font-size: 16px;
+      font-family: "Lato-Regular";
+      letter-spacing: -0.41px;
+    }
+  }
+  
+  &__photo-wrap {
+    width: 90%;
+    & > img {
+      width: 100%;
+      object-fit: cover;
+      transform: scale(1.0001);
+    }
+  }
+  
+  &__scrible {
+    width: clamp(32.813rem, 8.732rem + 38.84vw, 43.688rem);
+    height: clamp(7.188rem, 1.79rem + 8.71vw, 9.625rem);
+    background: url('../img/sprites/lines/scribble_light-3.png') no-repeat center center/cover;
+    position: absolute;
+    bottom: -3%;
+    left: -5%;
+    display: none;
+  }
+
+  @media screen and (min-width: 576px) {
+    &__photo-wrap {
+      width: 75%;
+    }
+  } 
+  @media screen and (min-width: 992px) {
+    & {
+      padding: 150px 0;
+
+      &__wrapper {
+        flex-direction: row;
+        gap: 30px;
+      }
+      &__text-wrap {
+        width: calc(50% - 40px);
+        text-align: left;
+        padding-left: 30px;
+      }
+      &__text {
+        max-width: 455px;
+        gap: 60px;
+        & > h3 {
+          font-size: 25px;
+        }
+      }
+      &__photo-wrap {
+        width: calc(50% + 40px);
+      }
+      &__scrible {
+        display: block;
+      }
+    }
+  }
+}
+   

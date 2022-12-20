@@ -1,0 +1,198 @@
+.new-places {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  &__wrapper {
+    max-width: 1220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  &__text-wrap {
+    max-width: 780px;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h2 {
+      font-size: clamp(2.813rem, 1.866rem + 4.73vw, 6.125rem);
+      font-family: "Cardo-Bold";
+      line-height: 1;
+      letter-spacing: -2.44px;
+      margin: 20px 0 60px 0;
+    }
+    & > p {
+      font-family: "Lato-Black";
+      letter-spacing: -0.63px;
+      font-size: 18px;
+    }
+  }
+
+  &__airplane {
+    width: clamp(3.438rem, 3.116rem + 1.61vw, 4.563rem);
+    height: clamp(3.438rem, 3.116rem + 1.61vw, 4.563rem);
+    background: url('../img/sprites/icons/airplace-icon.png') no-repeat center center/cover;
+  }
+
+  &__photos-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__big-photo {
+    margin-right: 40px;
+    max-width: 564px;
+    width: 100%;
+    max-height: 776px;
+    height: 100%;
+    display: none;
+    position: relative;
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: '';
+      background: url('../img/sprites/lines/tape.png') no-repeat center center/cover;
+      position: absolute;
+      width: 52px;
+      height: 252px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -25px;
+    }
+  }
+    
+  &__description-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .description {
+    &__photo-wrap {
+    max-width: 418px;
+    width: 100%;
+    max-height: 322px;
+    height: 100%;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__text-wrap {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      & > a {
+        text-decoration: underline;
+        font-size: clamp(1.25rem, 0.964rem + 1.43vw, 2.25rem);
+        font-family: "Cardo-Bold";
+        letter-spacing: -0.91px;
+        line-height: 1.37;
+      }
+    }
+
+    &__link-description {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+        & > p {
+        font-size: 16px;
+        font-family: "Lato-Regular";
+        letter-spacing: -0.41px;
+      }
+    }
+    
+    &__arrow {
+      width: 120px;
+      height: 40px;
+      align-self: flex-end;
+      display: none;
+
+      & > a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: url('../img/sprites/icons/arrow.png') no-repeat center center/cover;
+      }
+    }
+  }
+
+  &__scribble {
+    width: clamp(1.813rem, -2.995rem + 13.35vw, 7.188rem);
+    height: clamp(7.188rem, -12.098rem + 53.57vw, 28.75rem);
+    background: url('../img/sprites/lines/scribble_dark-5.png') no-repeat center center/cover;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    display: none;
+  }
+
+  @media screen and (min-width: 576px) {
+    .description {
+      &__text-wrap {
+        flex-direction: row;
+        text-align: left;
+        & > a {
+          text-align: center;
+        }
+      }
+
+      &__link-description {
+        max-width: 50%;
+      }
+    }
+  } 
+
+  @media screen and (min-width: 992px) {
+    & {
+      &__text-wrap {
+        margin-bottom: 60px;
+        & > p {
+          font-size: 25px;
+        }
+      }
+      &__big-photo {
+        display: block;
+      }
+      &__description-wrap {
+        align-items: flex-start;
+        gap: 60px;
+      }
+      &__scribble {
+        display: block;
+      }
+
+      .description {
+        &__text-wrap > a {
+          text-align: left;
+        }
+        &__link-description {
+          max-width: 320px;
+        }
+        &__arrow {
+          display: block;
+        }
+      }
+    }
+  } 
+}

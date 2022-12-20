@@ -1,0 +1,107 @@
+.be-updated {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  
+  &__wrapper {
+    max-width: 1220px;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  &__text-wrap {
+    max-width: 455px;
+    width: 100%;
+
+    & > h2 {
+      width: 100%;
+      margin-bottom: 40px;
+      font-size: clamp(2.625rem, 1.911rem + 3.57vw, 5.125rem);
+      line-height: 1;
+      letter-spacing: -2.04px;
+      text-align: center;
+    }
+  }
+  
+  &__form {
+    min-height: 500px;
+
+    &.form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      & > input,
+      & > textarea {
+        border: 3px solid $dark-gray-color;
+        border-radius: 3px;
+        padding: 10px 20px;
+        font-family: "Lato-Regular";
+        font-size: 16px;
+        color: $dark-gray-color;
+        background-color: $light-gray-color;
+      }
+      & > input:focus,
+      & > textarea:focus {
+        background-color:  rgb(212, 212, 212);
+      }
+      & > textarea {
+        height: 224px;
+        margin-bottom: 10px;
+        resize: none;
+      }
+    }
+  }
+ 
+  &__button {
+    width: 100%;
+    height: auto;
+    padding: 15px 30px;
+    background-color: $dark-gray-color;
+    color: $light-gray-color;
+    border: 3px solid $dark-gray-color;
+
+    &:hover {
+      background-color: $light-gray-color;
+      color: $dark-gray-color;
+    }
+  }
+  
+  &__photo-wrap {
+    max-width: 666px;
+    width: 100%;
+    max-height: 730px;
+    height: 100%;
+
+    & > img {
+      width: 100%;
+      object-fit: cover;
+    } 
+  }
+
+  @media screen and (min-width: 992px) {
+    &__wrapper {
+      flex-direction: row;   
+      justify-content: space-between;
+      gap: 30px;
+    }
+    &__text-wrap > h2 {
+      text-align: left;
+    }
+    &__form {
+      min-height: 610px;
+    }
+    .form > input,
+    .form > textarea {
+      padding: 15px 30px;
+      font-size: 21px;
+    }
+    .form > textarea {
+      margin-bottom: 35px;
+    }
+  }
+}
+
